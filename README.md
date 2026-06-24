@@ -28,6 +28,8 @@
 
 ## Datos
 
+Se incluye un archivo JSON donde se guardan las métricas obtenidas para utilizarlo como datos de entrada en Ollama; y el archivo .txt que incluye el informe generado.
+
 Los conjuntos de datos utilizados en este trabajo no se incluyen en el repositorio, ya que han sido proporcionados exclusivamente para la realización del TFM.
 
 ## Reproducción

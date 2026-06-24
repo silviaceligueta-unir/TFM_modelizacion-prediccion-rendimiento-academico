@@ -1,0 +1,18 @@
+INFORME ANALÍTICO: Modelización y predicción del rendimiento académico mediante técnicas estadísticas y modelos de inteligencia artificial aplicados a datos longitudinales de grupos-clase.
+
+En el presente informe, se analiza y interpreta los resultados obtenidos en la modelización y predicción del rendimiento académico utilizando técnicas estadísticas y modelos de inteligencia artificial. Los objetivos son facilitar la interpretación de los resultados predictivos para apoyar decisiones académicas orientadas a la mejora educativa.
+
+Los resultados de clasificación del resultado académico en tres categorías (Aprobado, Suspenso o No presentado) muestran que el modelo Random Forest con inclusión del curso 2019-2020 obtiene el mejor rendimiento, con una precisión del 64,53%. La incorporación del grupo-clase y la edad aproximada se muestra como un factor clave para mejorar el rendimiento predictivo. La exclusión del curso 2019-2020 no tiene un impacto significativo en los resultados.
+
+En cuanto a la regresión de nota media final por grupo-clase, asignatura y etapa, se obtienen resultados similares entre los diferentes modelos utilizados (Random Forest, XGBoost, LightGBM y CatBoost). El modelo CatBoost obtiene el mejor rendimiento global, con un error absoluto medio (MAE) de 0,328 y un coeficiente de determinación (R²) del 87,82%. Estos resultados sugieren una capacidad elevada para estimar la nota media final agregada.
+
+En resumen, los resultados obtenidos en la modelización y predicción del rendimiento académico muestran que la inclusión del curso 2019-2020 y la incorporación de variables contextuales como el grupo-clase y la edad aproximada mejoran significativamente el rendimiento predictivo. Además, los modelos de regresión muestran una capacidad elevada para estimar la nota media final agregada.
+
+Implicaciones educativas:
+
+* La inclusión del curso 2019-2020 y la consideración de variables contextuales como el grupo-clase y la edad aproximada pueden ser herramientas valiosas para mejorar el rendimiento académico.
+* Los modelos predictivos pueden ser utilizados para identificar a los estudiantes que necesitan apoyo adicional y diseñar intervenciones personalizadas.
+* La mejora del rendimiento académico puede ser alcanzada mediante la implementación de estrategias educativas efectivas, como el apoyo individualizado y la motivación.
+
+Conclusión:
+El presente informe analiza y interpreta los resultados obtenidos en la modelización y predicción del rendimiento académico utilizando técnicas estadísticas y modelos de inteligencia artificial. Los resultados sugieren que la inclusión del curso 2019-2020 y la incorporación de variables contextuales como el grupo-clase y la edad aproximada mejoran significativamente el rendimiento predictivo. Estos resultados pueden ser utilizados para apoyar decisiones académicas orientadas a la mejora educativa y mejorar el rendimiento académico del alumnado.

@@ -1,0 +1,84 @@
+{
+    "fecha_generacion": "2026-06-24 13:32:48",
+    "contexto_tfm": {
+        "titulo": "Modelización y predicción del rendimiento académico mediante técnicas estadísticas y modelos de inteligencia artificial aplicados a datos longitudinales de grupos-clase",
+        "objetivo": "Analizar y predecir el rendimiento académico a partir de datos longitudinales de grupos-clase.",
+        "publico_informe": "Personal docente y equipos directivos de Educación Secundaria",
+        "finalidad_informe": "Facilitar la interpretación de resultados predictivos para apoyar decisiones académicas orientadas a la mejora educativa.",
+        "cursos_analizados": [
+            "2013-2014",
+            "2014-2015",
+            "2015-2016",
+            "2016-2017",
+            "2019-2020",
+            "2020-2021"
+        ]
+    },
+    "clasificacion_resultado_academico": {
+        "descripcion": "Predicción de RESULTADO académico en tres categorías: Aprobado, Suspenso o No presentado.",
+        "metrica_principal": "accuracy",
+        "aclaracion": "El modelo no predice una nota exacta, sino una categoría académica.",
+        "con_curso_2019_2020": {
+            "descripcion": "Modelos entrenados incluyendo el curso 2019-2020.",
+            "arbol_decision_accuracy": 0.34865861150931804,
+            "random_forest_accuracy": 0.46672127790292856,
+            "random_forest_tipo_ev_grupo_clase_accuracy": 0.6453000204792136,
+            "random_forest_grupo_clase_edad_accuracy": 0.6498566455048126,
+            "regresion_logistica_accuracy": 0.46006553348351426,
+            "k_fold_accuracy_media": 0.4229469588367807,
+            "grid_search_accuracy": 0.5224374178273544
+        },
+        "sin_curso_2019_2020": {
+            "descripcion": "Modelos entrenados excluyendo el curso 2019-2020 para comprobar el efecto de este curso en los resultados.",
+            "arbol_decision_accuracy": 0.3617907339927121,
+            "random_forest_accuracy": 0.4514431141188039,
+            "random_forest_tipo_ev_grupo_clase_accuracy": 0.6419688819480595,
+            "random_forest_grupo_clase_edad_accuracy": 0.6467696223031986,
+            "regresion_logistica_accuracy": 0.46011915090519984,
+            "k_fold_accuracy_media": 0.365689166522066,
+            "grid_search_accuracy": 0.513780438429059
+        },
+        "interpretacion_esperada": {
+            "mejor_resultado": "El mejor rendimiento de clasificación se obtiene con Random Forest al incorporar grupo-clase y edad aproximada.",
+            "idea_clave": "La mejora principal no depende únicamente del algoritmo, sino de la incorporación de variables contextuales."
+        }
+    },
+    "regresion_nota_media_final": {
+        "descripcion": "Predicción de la nota media final por grupo-clase, asignatura y etapa.",
+        "metricas": {
+            "mae": "Error absoluto medio. Cuanto menor, mejor.",
+            "rmse": "Raíz del error cuadrático medio. Cuanto menor, mejor.",
+            "r2": "Coeficiente de determinación. Cuanto más cercano a 1, mejor."
+        },
+        "random_forest": {
+            "mae": 0.38461130746125344,
+            "rmse": 0.48994565141203716,
+            "r2": 0.8539343259875078
+        },
+        "xgboost": {
+            "mae": 0.3437780846602931,
+            "rmse": 0.43921741032308814,
+            "r2": 0.8826153130043041
+        },
+        "lightgbm": {
+            "mae": 0.3824935483825691,
+            "rmse": 0.4783563950468301,
+            "r2": 0.8607627231313054
+        },
+        "catboost": {
+            "mae": 0.3280546297418972,
+            "rmse": 0.44739976585387,
+            "r2": 0.8782009622434648
+        },
+        "interpretacion_esperada": {
+            "mejor_modelo": "CatBoost obtiene el mejor rendimiento global en regresión, con menor MAE y mayor R2.",
+            "idea_clave": "Los modelos de regresión muestran una capacidad elevada para estimar la nota media final agregada."
+        }
+    },
+    "uso_llm": {
+        "herramienta": "Ollama",
+        "modelo": "llama3",
+        "funcion": "Generar un informe analítico en lenguaje natural a partir del JSON de resultados.",
+        "advertencia": "El informe generado por el LLM debe revisarse manualmente antes de incorporarse al TFM o utilizarse en un contexto educativo."
+    }
+}
